@@ -11,5 +11,4 @@ class UserController extends Controller
         $query = Db::select("select * from users");
         return response()->json($query);
     }
-        
 }

@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PrPoCerController;
+use App\Http\Controllers\ImageUploadController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/users', [UserController::class, 'getAllUsers']);
+
+Route::get('/loadAnswer', [PrPoCerController::class, 'getAllUsers']);
+
+Route::post('/uploadImage', [ImageUploadController::class, 'uploadImage']);
+
+Route::get('/loadListImage', [ImageUploadController::class, 'loadListImage']);
+
+Route::delete('/deleteImage', [ImageUploadController::class, 'deleteImage']);
