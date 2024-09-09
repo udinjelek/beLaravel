@@ -16,4 +16,11 @@ class UserController extends Controller
     {
         return "hello world";
     }
+
+    public function hi()
+    {
+        $dataOut = [    'id' => 01,
+                        'name' => 'monster',];
+        return response()->json($dataOut);
+    }
 }

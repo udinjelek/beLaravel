@@ -31,3 +31,5 @@ Route::get('/loadListImage', [ImageUploadController::class, 'loadListImage']);
 Route::delete('/deleteImage', [ImageUploadController::class, 'deleteImage']);
 
 Route::get('/hello', [UserController::class, 'helloworld']);
+
+Route::get('/hey', [UserController::class, 'hi']);
