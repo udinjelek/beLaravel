@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PrPoCerController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,3 +34,5 @@ Route::delete('/deleteImage', [ImageUploadController::class, 'deleteImage']);
 Route::get('/hello', [UserController::class, 'helloworld']);
 
 Route::get('/hey', [UserController::class, 'hi']);
+
+Route::get('/uploadImage', [FileController::class,'uploadImage']);
